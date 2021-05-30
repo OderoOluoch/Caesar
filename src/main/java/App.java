@@ -6,13 +6,11 @@ public class App {
 
         boolean runningProgram = true;
 
-        System.out.println("Welcome. We send your message securely");
-        System.out.println("Type the word messaging to proceed \nOr exit to cancel");
-        String option = myScanner.nextLine();
 
         while(runningProgram){
-
-
+            System.out.println("Welcome. We send your message securely");
+            System.out.println("Type the word messaging to proceed \nOr exit to cancel");
+            String option = myScanner.nextLine();
             if(option.equals("messaging")){
                 System.out.println("Enter the message here to Encrypt your message: ");
                 String message = myScanner.nextLine();
@@ -31,6 +29,7 @@ public class App {
                 System.out.println("********************************************");
                 System.out.println("Your Decrypted Message: ");
                 System.out.println(decryptedMessage);
+                System.out.println("********************************************");
             }else if (option.equals("exit")){
                 runningProgram = false;
             }else {
