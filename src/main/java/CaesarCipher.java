@@ -15,7 +15,7 @@ public class CaesarCipher {
 
     public int shiftKeyForEncryption(){
         int key = getShiftKey();
-        if( key >76){
+        if( key > 76){
             key = key % 26;
         }else if(key < 0){
             key = (key % 26) + 26;
@@ -29,13 +29,13 @@ public class CaesarCipher {
         String message = getMessage();
         String encryptedMessage = "";
 
-        int length = message.length();
+        int length = message.length();//hello
         for(int i =0; i<length;i++){
             char ch = message.charAt(i);
             if(Character.isLetter(ch)){
                 if(Character.isLowerCase(ch)){
                     char c = (char)(ch+shiftedKey);
-                    if(c>'z'){
+                    if(c > 'z'){
                         encryptedMessage += (char)(ch -(26 - shiftedKey));
                     }else{
                         encryptedMessage += c;
