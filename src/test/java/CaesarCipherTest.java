@@ -32,4 +32,10 @@ class CaesarCipherTest {
         CaesarCipher testCaesarCipher = new CaesarCipher("hi",5);
         assertEquals("mn",testCaesarCipher.messageEncryption());
     }
+
+    @Test
+    void newCaesarCipher_manipulateMessageToEnforceDecryption_hi(){
+        CaesarCipher testCaesarCipher = new CaesarCipher("mn",5);
+        assertEquals("hi",testCaesarCipher.messageDecryption());
+    }
 }

@@ -12,6 +12,9 @@ public class CaesarCipher {
     public int getShiftKey(){
         return this.shiftKey;
     }
+
+
+    //Encryption logic
     public int shiftKeyForEncryption(){
         int key = getShiftKey();
         if( key >76){
@@ -51,6 +54,9 @@ public class CaesarCipher {
         }
         return encryptedMessage;
     }
+
+
+   //Decryption Logic
 
 
 
