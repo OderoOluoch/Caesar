@@ -57,6 +57,10 @@ public class CaesarCipher {
 
 
    //Decryption Logic
+    public String messageDecryption(){
+        String encryptedMessage = messageEncryption();
+        return encryptedMessage;
+    }
 
 
 
