@@ -20,4 +20,8 @@ class CaesarCipherTest {
         CaesarCipher testCaesarCipher = new CaesarCipher("message",5);
         assertEquals(5,testCaesarCipher.getShiftKey());
     }
+
+    @Test
+    void name() {
+    }
 }
