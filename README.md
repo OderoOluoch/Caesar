@@ -1,6 +1,6 @@
 #  CaesarCipher
 
-##Author
+### Author
 ####  **Odero Oluoch**
 
 ## Description
