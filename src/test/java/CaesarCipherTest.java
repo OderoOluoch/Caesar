@@ -29,7 +29,7 @@ class CaesarCipherTest {
 
     @Test
     void newCaesarCipher_manipulateMessageToEnforceEncryption_mn(){
-        CaesarCipher testCaesarCipher = new CaesarCipher("hii",5);
+        CaesarCipher testCaesarCipher = new CaesarCipher("hi",5);
         assertEquals("hi",testCaesarCipher.messageEncryption());
     }
 }

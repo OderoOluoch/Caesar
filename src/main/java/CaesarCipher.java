@@ -26,6 +26,31 @@ public class CaesarCipher {
     public String messageEncryption(){
         int shiftedKey = shiftKeyForEncryption();
         String message = getMessage();
-        return message;
+        String encryptedMessage = "";
+
+        int length = message.length();
+        for(int i =0; i<length;i++){
+            char ch = message.charAt(i);
+            if(Character.isLetter(ch)){
+                if(Character.isLowerCase(ch)){
+                    char c = (char)(ch+shiftedKey);
+                    if(c>'z'){
+                        encryptedMessage += (char)(ch -(26 - shiftedKey));
+                    }else{
+                        encryptedMessage += c;
+                    }
+                }else if(Character.isUpperCase(ch)){
+                    char c = (char)(ch + shiftedKey);
+                    if(c>'Z'){
+                        encryptedMessage += (char)(ch -(26 - shiftedKey));
+                    }else{
+                        encryptedMessage += c;
+                    }
+                }
+            }else {
+                encryptedMessage += ch;
+            }
+        }
+        return encryptedMessage;
     }
 }
