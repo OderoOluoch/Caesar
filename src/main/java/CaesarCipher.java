@@ -58,8 +58,39 @@ public class CaesarCipher {
 
    //Decryption Logic
     public String messageDecryption(){
+        int shiftedKey = shiftKeyForEncryption();
         String encryptedMessage = messageEncryption();
-        return encryptedMessage;
+
+        String decryptedMessage = "";
+
+        int length = encryptedMessage.length();
+        for(int i =0; i<length;i++){
+            char ch = encryptedMessage.charAt(i);
+            if(Character.isLetter(ch)){
+                if(Character.isLowerCase(ch)){
+                    char c = (char)(ch-shiftedKey);
+                    if(c<'a'){
+                        decryptedMessage += (char)(ch +(26 - shiftedKey));
+                    }else{
+                        decryptedMessage += c;
+                    }
+                }else if(Character.isUpperCase(ch)){
+                    char c = (char)(ch - shiftedKey);
+                    if(c<'A'){
+                        decryptedMessage += (char)(ch + (26 - shiftedKey));
+                        System.out.println(decryptedMessage);
+                    }else{
+                        decryptedMessage += c;
+                        System.out.println(decryptedMessage);
+                    }
+                }
+            }else {
+                decryptedMessage+= ch;
+                System.out.println(decryptedMessage);
+            }
+        }
+        System.out.println(decryptedMessage);
+        return decryptedMessage;
     }
 
 
