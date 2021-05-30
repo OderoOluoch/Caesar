@@ -15,6 +15,11 @@ public class CaesarCipher {
 
     public int ShiftRightKey(){
         int key = getShiftKey();
+        if( key >76){
+            key = key % 26;
+        }else if(key < 0){
+            key = (key % 26) + 26;
+        }
         return key;
     }
 }
