@@ -12,7 +12,6 @@ public class CaesarCipher {
     public int getShiftKey(){
         return this.shiftKey;
     }
-
     public int shiftKeyForEncryption(){
         int key = getShiftKey();
         if( key >76){
@@ -22,7 +21,6 @@ public class CaesarCipher {
         }
         return key;
     }
-
     public String messageEncryption(){
         int shiftedKey = shiftKeyForEncryption();
         String message = getMessage();
@@ -53,4 +51,7 @@ public class CaesarCipher {
         }
         return encryptedMessage;
     }
+
+
+
 }
