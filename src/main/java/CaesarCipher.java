@@ -6,4 +6,9 @@ public class CaesarCipher {
         this.mMessage = message;
         this.shiftKey=key;
     }
+
+    public String getMessage(){
+        return this.mMessage;
+    }
+
 }
