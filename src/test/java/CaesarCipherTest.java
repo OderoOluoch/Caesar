@@ -17,7 +17,7 @@ class CaesarCipherTest {
 
     @Test
     void newCaesarCipher_getShiftKey_5(){
-        CaesarCipher testCaesarCipher = new CaesarCipher("message",4);
+        CaesarCipher testCaesarCipher = new CaesarCipher("message",5);
         assertEquals(5,testCaesarCipher.getShiftKey());
     }
 }
