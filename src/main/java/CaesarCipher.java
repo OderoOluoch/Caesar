@@ -10,5 +10,8 @@ public class CaesarCipher {
     public String getMessage(){
         return this.mMessage;
     }
+    public int getShiftKey(){
+        return this.shiftKey;
+    }
 
 }
