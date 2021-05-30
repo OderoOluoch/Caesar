@@ -6,10 +6,12 @@ public class App {
 
         boolean runningProgram = true;
 
+        System.out.println("Welcome. We send your message securely");
+        System.out.println("Type the word messaging to proceed \nOr exit to cancel");
+        String option = myScanner.nextLine();
+
         while(runningProgram){
-            System.out.println("Welcome. We send your message securely");
-            System.out.println("Type the word messaging to proceed \nOr exit to cancel");
-            String option = myScanner.nextLine();
+
 
             if(option.equals("messaging")){
                 System.out.println("Enter the message here to Encrypt your message: ");
