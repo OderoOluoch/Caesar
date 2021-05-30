@@ -22,6 +22,8 @@ class CaesarCipherTest {
     }
 
     @Test
-    void name() {
+    void newCaesarCipher_manipulateShiftKeyToGetRightLetter_5(){
+        CaesarCipher testCaesarCipher = new CaesarCipher("message",5);
+        assertEquals(5,testCaesarCipher.ShiftRightKey());
     }
 }
