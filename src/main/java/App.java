@@ -6,7 +6,6 @@ public class App {
 
         boolean runningProgram = true;
 
-
         while(runningProgram){
             System.out.println("Welcome. We send your message securely");
             System.out.println("Type the word messaging to proceed \nOr exit to cancel");
@@ -36,6 +35,5 @@ public class App {
                 System.out.println("Please pick a valid option");
             }
         }
-
     }
 }
