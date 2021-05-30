@@ -12,6 +12,7 @@ public class CaesarCipher {
     public int getShiftKey(){
         return this.shiftKey;
     }
+
     public int shiftKeyForEncryption(){
         int key = getShiftKey();
         if( key >76){
@@ -21,6 +22,8 @@ public class CaesarCipher {
         }
         return key;
     }
+
+    //Encryption logic
     public String messageEncryption(){
         int shiftedKey = shiftKeyForEncryption();
         String message = getMessage();
@@ -53,5 +56,37 @@ public class CaesarCipher {
     }
 
 
+   //Decryption Logic
+    public String messageDecryption(){
+        int shiftedKey = shiftKeyForEncryption();
+        String encryptedMessage = messageEncryption();
 
+        String decryptedMessage = "";
+
+        int length = encryptedMessage.length();
+        for(int i =0; i<length;i++){
+            char ch = encryptedMessage.charAt(i);
+            if(Character.isLetter(ch)){
+                if(Character.isLowerCase(ch)){
+                    char c = (char)(ch-shiftedKey);
+                    if(c<'a'){
+                        decryptedMessage += (char)(ch +(26 - shiftedKey));
+                    }else{
+                        decryptedMessage += c;
+                    }
+                }else if(Character.isUpperCase(ch)){
+                    char c = (char)(ch - shiftedKey);
+                    if(c<'A'){
+                        decryptedMessage += (char)(ch + (26 - shiftedKey));
+                    }else{
+                        decryptedMessage += c;
+                    }
+
+                }
+            }else {
+                decryptedMessage+= ch;
+            }
+        }
+        return decryptedMessage;
+    }
 }
