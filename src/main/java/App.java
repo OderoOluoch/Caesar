@@ -35,5 +35,6 @@ public class App {
                 System.out.println("Please pick a valid option");
             }
         }
+        myScanner.close();
     }
 }
